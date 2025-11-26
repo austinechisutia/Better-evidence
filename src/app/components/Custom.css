@@ -1,0 +1,122 @@
+/* Gender radio group styling */
+.sd-selectbase--column-3 .sd-item {
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.sd-selectbase--column-3 .sd-item:hover {
+  background-color: #e5e7eb;
+}
+
+.sd-selectbase--column-3 .sd-item--checked {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sd-selectbase--column-3 .sd-radio__decorator {
+  display: none;
+}
+
+.sd-selectbase--column-3 .sd-item__control-label {
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.sd-selectbase--column-3 {
+  gap: 0.5rem;
+}
+
+/* Phone number with country code prefix */
+.sd-question[data-name="phone"] .sd-input {
+  padding-left: 60px;
+}
+
+.sd-question[data-name="phone"] .sd-question__content {
+  position: relative;
+}
+
+.sd-question[data-name="phone"] .sd-question__content::before {
+  content: '+1';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sd-question[data-name="phone"] .sd-question__content::after {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: #d1d5db;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* WhatsApp toggle switch */
+.sd-question[data-name="whatsappUpdates"] .sd-boolean {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 0.5rem 0;
+}
+
+.sd-question[data-name="whatsappUpdates"] .sd-boolean__switch {
+  width: 52px;
+  height: 28px;
+  background-color: #d1d5db;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  flex-shrink: 0;
+}
+
+.sd-question[data-name="whatsappUpdates"] .sd-boolean--checked .sd-boolean__switch {
+  background-color: #22c55e;
+}
+
+.sd-question[data-name="whatsappUpdates"] .sd-boolean__thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sd-question[data-name="whatsappUpdates"] .sd-boolean--checked .sd-boolean__thumb {
+  transform: translateX(24px);
+}
+
+.sd-question[data-name="whatsappUpdates"] .sd-boolean__label {
+  display: none !important;
+}
+
+.sd-question[data-name="whatsappUpdates"] .sd-question__title {
+  font-weight: 500;
+  color: #000000;
+}
+
+/* General spacing improvements */
+.sd-question {
+  margin-bottom: 1.5rem;
+}
